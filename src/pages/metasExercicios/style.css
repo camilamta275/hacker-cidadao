@@ -1,0 +1,116 @@
+/* Metas.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f2f6f9;
+}
+
+.app {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f2f6f9;
+}
+
+.page {
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d6dce5;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 15px 15px;
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.check-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.metas-list, .exercise-list {
+  margin-top: 1rem;
+}
+
+.meta-item {
+  margin-bottom: 1rem;
+}
+
+.meta-text {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #10c4b5;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.exercise-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.exercise-item input {
+  margin-right: 0.5rem;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.add-button {
+  background-color: #10c4b5;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background: #d6dce5;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  border-top: 1px solid #ccc;
+  border-radius: 15px 15px 0 0;
+}
+
+.footer-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

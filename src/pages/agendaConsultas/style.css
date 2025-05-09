@@ -1,0 +1,147 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f1f5f9;
+}
+
+.app-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2e8f0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.calendar-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+}
+
+.selectors select {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day-label {
+  padding: 5px;
+  background: none;
+}
+
+.day-cell {
+  background-color: #dce3f0;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day-cell.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+.day-cell.highlighted {
+  background-color: #7f9cf5;
+  color: white;
+}
+
+
+.event-box {
+  margin: 0.5rem 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.event-box.realizada {
+  background-color: #d1fae5;
+  border-left: 4px solid #10b981;
+}
+
+.event-box.perdida {
+  background-color: #ffe4e6;
+  border-left: 4px solid #ef4444;
+}
+
+.event-box.proxima {
+  background-color: #fef9c3;
+  border-left: 4px solid #facc15;
+}
+
+.event-box .title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.mark-next {
+  margin-top: 0.7rem;
+  padding: 0.5rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e2e8f0;
+  padding: 0.6rem 0;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+
+.footer-icon {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
