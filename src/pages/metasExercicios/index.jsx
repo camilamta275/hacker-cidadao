@@ -58,7 +58,6 @@ function MetasDiarias() {
       <div className="page">
         <header className="header">
           <h1>Metas diárias</h1>
-          <button className="check-btn">✔️</button>
         </header>
 
         <div className="metas-list">
@@ -103,7 +102,6 @@ function MetasDiarias() {
       <div className="page">
         <header className="header">
           <h1>Exercícios diários</h1>
-          <button className="check-btn">✔️</button>
         </header>
 
         <div className="exercise-list">

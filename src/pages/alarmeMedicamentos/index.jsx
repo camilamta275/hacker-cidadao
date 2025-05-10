@@ -28,6 +28,8 @@ function AlarmeApp() {
     { name: 'Metformina', time: '13h00 da Tarde', dosage: '', routine: '', active: true },
   ]);
 
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
   const [newMed, setNewMed] = useState({ name: '', dosage: '', days: [], time: '' });
   const [showAddForm, setShowAddForm] = useState(false);
 
@@ -62,25 +64,36 @@ function AlarmeApp() {
     <div className="app">
       <header className="header">
         <h1>Alarme Medicamentos</h1>
-        <button className="close-btn">X</button>
       </header>
       <div className="med-list">
-        {medications.map((med, index) => (
-          <div key={index} className="med-item">
-            <div className="med-title">{med.name} - {med.time}</div>
-            <label className="switch">
-              <input type="checkbox" checked={med.active} onChange={() => handleToggle(index)} />
-              <span className="slider" />
-            </label>
-            {med.dosage && (
-              <div className="med-details">
-                <p><strong>{med.name}</strong></p>
-                <p>{med.routine}</p>
-                <p>{med.dosage}</p>
-              </div>
-            )}
-          </div>
-        ))}
+          {medications.map((med, index) => (
+  <div key={index} className="med-item">
+    <div
+      className="med-title"
+      onClick={() =>
+        setExpandedIndex(expandedIndex === index ? null : index)
+      }
+      style={{ cursor: 'pointer' }}
+    >
+      {med.name} - {med.time}
+    </div>
+    <label className="switch">
+      <input
+        type="checkbox"
+        checked={med.active}
+        onChange={() => handleToggle(index)}
+      />
+      <span className="slider" />
+    </label>
+    {expandedIndex === index && med.dosage && (
+      <div className="med-details">
+        <p><strong>{med.name}</strong></p>
+        <p>{med.routine}</p>
+        <p>{med.dosage}</p>
+      </div>
+    )}
+  </div>
+))}
       </div>
       <div className="add-button-container">
         <button className="add-button" onClick={() => setShowAddForm(true)}>+</button>

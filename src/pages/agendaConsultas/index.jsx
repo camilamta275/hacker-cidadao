@@ -68,7 +68,7 @@ const CalendarApp = () => {
         <p>Horário: {event.time}</p>
         <p>Profissional: {event.doctor}</p>
         {event.status === "realizada" && (
-          <button className="mark-next">Marcar próxima agora</button>
+          <button className="mark-next"> Agendamento do Conecta Recife</button>
         )}
       </div>
     );
